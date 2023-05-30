@@ -56,11 +56,4 @@ public class Student {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
-	
-	
-	 
-
 }
