@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+	
+	<bean class="com.springcore.springcore.student.Student" name= "student1">
+		<property name="studentId" value="1" />
+		<property name="studentName" value ="Rushikesh Masule"/>
+		<property name="studentAddress" value ="Dhule"/>
+		<property name="studentContact" value ="8551065471	"/>
+		 
+		<property name="props">
+			<props>
+				<prop key="username" >rushikesh99</prop>
+				<prop key="password" >rushi99@123</prop>
+				<prop key="email" >rushikesh99@gmail.com</prop>
+			</props>
+
+	
+	</property>
+	</bean>
+
+	<bean class="com.springcore.teacher.Teacher" name="teacher1"> 
+		<property name="teacherId" value="1001"/>
+		<property name="teacherName" value="parag patil"/>
+		<property name="primarySubjects">
+			<map>
+				<entry key="subject1" value="maths"/>
+				<entry key="subject2" value="science"/>
+			</map>
+		</property>
+		<property name="teacherAddress" value="pune"/>
+		<property name="teacherContact" value="851252314"/>
+		
+	</bean>
+	
+	<bean class="com.springcore.admin.Address" name="adminadd1">
+		<constructor-arg value ="i am return to dubai"/>
+		<property name="plotno"  value ="120"></property>
+	</bean>
+	
+	<bean class="com.springcore.admin.Admin" name="admin1">
+		<constructor-arg value="111"/>
+		<constructor-arg value="admin1"/>
+		<constructor-arg ref="adminadd1"/>
+		<constructor-arg value="852136452" />
+		<constructor-arg ref="adminadd1"/>
+
+	</bean> 
+	
+   
+   <bean class="com.springcore.test.Test" name="subject" init-method="init" destroy-method="destroy">
+
+ 	<property name="subId" value="11"></property>  
+ 	<property name="subName" value="Englist"></property>  
+ 	<property name="std" value="10th"></property>  	
+   </bean>
+   
+</beans>
