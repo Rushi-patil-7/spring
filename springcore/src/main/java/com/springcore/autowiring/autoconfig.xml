@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+	<bean class="com.springcore.autowiring.Car" name="cardetails1" 	autowire="byName">
+
+		<property name="modelId" value="11252" />
+		<property name="modelName" value="mercedes E250" />
+		<property name="price" value="6250000" />
+	</bean>
+
+	<bean class="com.springcore.autowiring.Car" name="cardetails2" autowire="byType">
+
+		<property name="modelId" value="25362" />
+		<property name="modelName" value="mercedes GLS-300" />
+		<property name="price" value="4251000" />
+		
+	</bean>
+	
+	<bean class="com.springcore.autowiring.Car" name="cardetails3" autowire="constructor">
+
+    	<property name="modelId" value="221122" />
+    	<property name="modelName" value="mercedes Benz E-Class" />
+    	<property name="price" value="8500000" />
+    	
+    </bean>
+	
+	<bean class="com.springcore.autowiring.Component" name="component1">
+		<property name="Engine" value="BS6" />
+		<property name="color" value="red" />
+		<property name="tyre" value="MRF" />
+		
+	</bean>
+</beans>
