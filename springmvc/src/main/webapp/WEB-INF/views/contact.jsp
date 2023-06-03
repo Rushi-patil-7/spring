@@ -21,7 +21,7 @@
 	<h2 class="text-center mt-5 pt-2">Contact with Us</h2>
 	<form action="processform" method ="post" class="container mt-5">
 		<div class="form-group">
-			<label for="exampleInputEmail1">Email address</label> <input
+			<label for="exampleInputEmail">Email address</label> <input
 				type="email" class="form-control" id="exampleInputEmail1"
 				aria-describedby="emailHelp" placeholder="Enter email" name="userEmail">
 		</div>
