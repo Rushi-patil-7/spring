@@ -8,9 +8,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h4>${username }</h4>
-<h4>${userEmail }</h4>
-<h4>${mobile }</h4>
-<h4>${feedback }</h4>
+<h1>Feedback form fill succesful by,</h1>
+<h4>${user.username }</h4>
+<h4>${user.userEmail }</h4>
+<h4>${user.mobile }</h4>
+<h4>${user.feedback }</h4>
 </body>
 </html>
