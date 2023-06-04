@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+	<context:component-scan base-package="com.springcore.styreotype.scope" />
+	<util:map map-class="java.util.HashMap" id="pricelist" >
+		<entry key="Rice" value="100" />
+		<entry key="Chapati" value="12" />
+		<entry key="chicken thali" value="220" />
+		<entry key="fish thali" value="150" />
+	</util:map>
+	<util:list list-class="java.util.LinkedList" id="menulist">
+		<value>Chicken thali</value>
+		<value>Veg thali</value>
+		<value>Fish thali</value>
+		<value>Rice</value>
+
+	</util:list>
+	<bean class="com.springcore.styreotype.scope.Hotel"
+		name="maincourse" scope="prototype">
+	</bean>
+
+</beans>

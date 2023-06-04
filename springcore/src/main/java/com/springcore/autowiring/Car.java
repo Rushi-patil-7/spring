@@ -1,5 +1,7 @@
 package com.springcore.autowiring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Car {
 	
 	private int modelId;

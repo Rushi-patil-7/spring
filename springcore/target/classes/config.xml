@@ -22,8 +22,6 @@
 				<prop key="password" >rushi99@123</prop>
 				<prop key="email" >rushikesh99@gmail.com</prop>
 			</props>
-
-	
 	</property>
 	</bean>
 

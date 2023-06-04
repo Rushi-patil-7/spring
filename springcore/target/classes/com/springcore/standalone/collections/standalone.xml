@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+    
+    <util:list list-class="java.util.ArrayList" id="items">
+    	<value>Tea</value>
+    	<value>Coffee</value>
+    	<value>Milk</value>
+    	<value>BornVita</value>
+    	<value>BlackTea</value>
+    </util:list>
+    <util:map map-class="java.util.HashMap" id="item-price">
+    
+    <entry key="Tea" value="15" /> 
+    <entry key="Milk" value="20" />
+    <entry key="BornVita" value="30" />
+    <entry key="BlackTea" value="20" />
+    	
+    </util:map>
+    
+    <bean class="com.springcore.standalone.collections.Restro" name="drinks"> 
+    	<property name="menu" ref="items" />
+    	<property name="pricing" ref="item-price" />
+    </bean>
+      
+	</beans>
